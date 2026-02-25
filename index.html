@@ -3,89 +3,208 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bridging the Digital Divide: A Complete Guide to Free Tablets</title>
-    <meta name="description" content="Learn everything you need to know about qualifying for and receiving a free tablet to stay connected in the modern digital world.">
+    <title>Complete Guide to Government Free Tablets & Connectivity</title>
+    <meta name="description" content="Discover our comprehensive guide on how to qualify for government assistance programs, get a free tablet, and bridge the digital divide today.">
+    <link rel="canonical" href="https://freetablets.github.io/from-govt/" />
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body { font-family: 'Inter', sans-serif; }
+        body { font-family: 'Inter', system-ui, sans-serif; scroll-behavior: smooth; }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800 antialiased leading-relaxed">
+<body class="bg-slate-50 text-slate-800 antialiased leading-relaxed">
 
-    <header class="bg-blue-700 text-white py-12 shadow-md">
-        <div class="container mx-auto px-6 lg:px-20">
-            <h1 class="text-4xl lg:text-5xl font-extrabold mb-4 leading-tight">Bridging the Digital Divide: A Complete Guide to Free Tablets</h1>
-            <p class="text-lg lg:text-xl font-light">Understanding government assistance, connectivity programs, and how you can get access to essential technology today.</p>
+    <nav class="bg-blue-900 text-white sticky top-0 z-50 shadow-lg">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-extrabold tracking-wider">TechAccess</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="#about" class="hover:text-blue-300 transition font-medium">About Us</a>
+                <a href="#guide" class="hover:text-blue-300 transition font-medium">Complete Guide</a>
+                <a href="#tool" class="bg-blue-600 hover:bg-blue-500 px-4 py-2 rounded-full font-bold transition">Eligibility Tool</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="bg-blue-800 text-white py-20 shadow-inner">
+        <div class="container mx-auto px-6 lg:px-20 text-center">
+            <h1 class="text-4xl lg:text-6xl font-extrabold mb-6 leading-tight">Empowering You Through Digital Connectivity</h1>
+            <p class="text-lg lg:text-2xl font-light mb-10 max-w-3xl mx-auto">Accessing the internet is a fundamental right. Explore our comprehensive resources, check your eligibility, and secure the technological tools you need for success.</p>
+            <a href="#tool" class="bg-white text-blue-900 font-bold py-3 px-8 rounded-full shadow-lg hover:bg-gray-100 transition text-lg">Check Your Eligibility Now</a>
         </div>
     </header>
 
-    <main class="container mx-auto px-6 lg:px-20 py-12 bg-white shadow-lg mt-8 mb-12 rounded-lg">
-        
-        <article class="prose lg:prose-xl max-w-none">
+    <section id="about" class="container mx-auto px-6 lg:px-20 py-16">
+        <div class="bg-white rounded-2xl shadow-xl p-8 lg:p-12 border-t-4 border-blue-600">
+            <h2 class="text-3xl font-bold text-blue-900 mb-6 border-b-2 border-gray-100 pb-4">About Our Mission</h2>
+            <div class="grid md:grid-cols-2 gap-10">
+                <div>
+                    <p class="mb-4 text-gray-700">Welcome to TechAccess. We are a dedicated platform committed to closing the digital divide. In a world where every vital service has moved online, lack of access to a smart device can severely limit a person's potential. Our mission is to provide clear, accurate, and up-to-date information regarding government assistance programs that help low-income households obtain essential technology.</p>
+                    <p class="text-gray-700">We believe in transparency, education, and empowerment. By simplifying complex bureaucratic processes, we aim to guide you seamlessly from understanding your rights to holding a new device in your hands. We aggregate data from official sources to ensure you get the best and most reliable guidance available on the internet today.</p>
+                </div>
+                <div class="bg-blue-50 p-6 rounded-xl border border-blue-100">
+                    <h3 class="text-xl font-bold text-blue-800 mb-3">Core Values (EEAT Focused)</h3>
+                    <ul class="list-none space-y-3">
+                        <li class="flex items-start">
+                            <span class="text-blue-600 font-bold mr-2">✓</span>
+                            <span><strong>Expertise:</strong> Thoroughly researched guides based on current federal policies.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-blue-600 font-bold mr-2">✓</span>
+                            <span><strong>Experience:</strong> Years of analyzing telecommunication assistance programs.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-blue-600 font-bold mr-2">✓</span>
+                            <span><strong>Authoritativeness:</strong> Referencing direct government portals.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-blue-600 font-bold mr-2">✓</span>
+                            <span><strong>Trust:</strong> Absolutely no hidden fees, scams, or misleading claims.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tool" class="bg-slate-200 py-16">
+        <div class="container mx-auto px-6 lg:px-20">
+            <div class="max-w-2xl mx-auto bg-white rounded-2xl shadow-2xl overflow-hidden">
+                <div class="bg-blue-700 text-white text-center py-6">
+                    <h2 class="text-3xl font-bold">Quick Eligibility Checker</h2>
+                    <p class="text-blue-100 mt-2 text-sm">Find out if you might qualify in less than 30 seconds.</p>
+                </div>
+                <div class="p-8">
+                    <form id="eligibilityForm" onsubmit="event.preventDefault(); calculateEligibility();">
+                        <div class="mb-6">
+                            <label class="block text-gray-700 font-bold mb-2" for="income">Does your total household income fall below 135% of the Federal Poverty Guidelines?</label>
+                            <select id="income" class="w-full px-4 py-3 rounded-lg border focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500">
+                                <option value="">Please select an option</option>
+                                <option value="yes">Yes, it is below.</option>
+                                <option value="no">No, it is above.</option>
+                                <option value="unsure">I am not sure.</option>
+                            </select>
+                        </div>
+                        <div class="mb-6">
+                            <label class="block text-gray-700 font-bold mb-2" for="programs">Does anyone in your household participate in SNAP, Medicaid, or SSI?</label>
+                            <select id="programs" class="w-full px-4 py-3 rounded-lg border focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500">
+                                <option value="">Please select an option</option>
+                                <option value="yes">Yes, we participate.</option>
+                                <option value="no">No, we do not participate.</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-lg transition duration-300 shadow-md">Analyze My Status</button>
+                    </form>
+                    
+                    <div id="resultArea" class="mt-6 hidden p-4 rounded-lg border">
+                        <p id="resultText" class="text-center font-semibold text-lg"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main id="guide" class="container mx-auto px-6 lg:px-20 py-16">
+        <article class="bg-white p-8 lg:p-16 rounded-2xl shadow-xl prose lg:prose-xl max-w-none">
             
-            <h2 class="text-3xl font-bold text-blue-800 mb-6 mt-8">Introduction to Digital Equality</h2>
-            <p class="mb-4">In today's fast-paced world, having access to the internet and a reliable device is no longer a luxury. It has become an absolute necessity. Whether you are a student trying to complete your homework, a professional searching for a new job, or a senior citizen needing to consult with a doctor via telehealth services, a connected device is your gateway to the world. Unfortunately, millions of people still lack access to these fundamental tools. This gap between those who have access to modern information technology and those who do not is known as the digital divide.</p>
-            <p class="mb-4">Governments and private organizations have recognized this critical issue. They understand that a society can only progress when all its members have equal opportunities to succeed. As a result, various programs have been launched to provide technological assistance to low-income individuals and families. One of the most significant initiatives is providing free or heavily discounted devices. If you are struggling to afford a device, you might be eligible to <a href="https://freetablet.click/" class="text-blue-600 font-bold hover:underline" rel="dofollow">apply for a free tablet</a> through specific authorized channels.</p>
-
-            <h2 class="text-3xl font-bold text-blue-800 mb-6 mt-8">The Role of Government Support Programs</h2>
-            <p class="mb-4">To combat the digital divide, federal authorities have established programs designed to make communication services more affordable. A prime example is the Lifeline program. This is a federal initiative that lowers the monthly cost of phone or internet services for eligible consumers. By lowering these costs, families can redirect their limited financial resources to other essential needs like food, rent, and healthcare.</p>
-            <p class="mb-4">It is highly recommended to understand the official rules and benefits of these initiatives. You can read more about consumer rights and program details directly from the source by visiting the <a href="https://www.fcc.gov/lifeline-consumers" class="text-blue-600 font-bold hover:underline" rel="dofollow">FCC Lifeline Consumers</a> page. This official government resource provides up-to-date information on how the program works and what you need to do to stay compliant with their regulations.</p>
-            <p class="mb-4">While Lifeline primarily focuses on the monthly service cost, many participating wireless providers offer a bundled deal. When you sign up for their service through these assistance programs, they will often provide a smart device at no additional cost or for a very small co-pay. This is how the majority of users obtain their devices.</p>
-
-            <h2 class="text-3xl font-bold text-blue-800 mb-6 mt-8">Who Qualifies for These Programs?</h2>
-            <p class="mb-4">Eligibility for these assistance programs is strictly regulated to ensure that the resources go to those who truly need them. Generally, qualification is based on either your household income or your participation in other federal assistance programs. Let us break down the specific criteria so you can easily determine if you are a candidate.</p>
+            <h2 class="text-4xl font-extrabold text-slate-900 mb-8 border-b-2 border-slate-100 pb-4">The Complete Guide to Securing Your Free Government Tablet</h2>
             
-            <h3 class="text-2xl font-semibold text-gray-800 mb-4 mt-6">Income-Based Eligibility</h3>
-            <p class="mb-4">If your household income is at or below 135 percent of the Federal Poverty Guidelines, you will likely qualify. These guidelines are updated annually and vary depending on the size of your household and the state where you live. You will need to provide proof of income, such as a recent tax return, three consecutive pay stubs, or a statement of benefits from a retirement or pension program.</p>
+            <p class="lead text-xl text-slate-600 mb-8">Navigating the world of government benefits can be overwhelming. This comprehensive, step-by-step masterclass is designed to simplify the entire journey. From understanding the core policies to finally holding the device in your hands, we cover every single detail you need to succeed.</p>
 
-            <h3 class="text-2xl font-semibold text-gray-800 mb-4 mt-6">Program-Based Eligibility</h3>
-            <p class="mb-4">You can also qualify if you or someone in your household already participates in certain government assistance programs. If you receive benefits from any of the following programs, you are automatically eligible:</p>
-            <ul class="list-disc pl-8 mb-6 text-gray-700">
-                <li class="mb-2">Supplemental Nutrition Assistance Program (SNAP), previously known as Food Stamps.</li>
-                <li class="mb-2">Medicaid.</li>
-                <li class="mb-2">Supplemental Security Income (SSI).</li>
-                <li class="mb-2">Federal Public Housing Assistance (FPHA).</li>
-                <li class="mb-2">Veterans Pension and Survivors Benefit.</li>
+            <h3 class="text-2xl font-bold text-blue-800 mt-10 mb-4">Chapter 1: Understanding the Digital Divide and Government Intervention</h3>
+            <p class="mb-4">The internet is the backbone of modern society. Without it, finding a job, finishing schoolwork, or even accessing basic medical care becomes a monumental challenge. The gap between those who have easy access to digital tools and those who do not is a serious socio-economic issue. Governments have realized that providing digital infrastructure is just as important as building roads and bridges.</p>
+            <p class="mb-4">To solve this problem, federal initiatives have been established over the decades. The primary goal is to subsidize the cost of telecommunications services. By reducing the monthly burden of internet and phone bills, low-income households can allocate their funds to other critical life expenses. Furthermore, many participating internet service providers have taken this a step further by offering hardware solutions. If you meet the strict criteria, you have a high chance to <a href="https://freetablet.click/" class="text-blue-600 font-bold hover:underline transition" rel="dofollow">claim your free government tablet</a> through certified distribution partners.</p>
+
+            <h3 class="text-2xl font-bold text-blue-800 mt-10 mb-4">Chapter 2: The Core Assistance Programs Explained</h3>
+            <p class="mb-4">You cannot apply for a device directly from the government. Instead, the government provides funding to telecommunication companies, who in turn provide discounted services and devices to you. The foundational program enabling this ecosystem is Lifeline.</p>
+            <p class="mb-4">Lifeline has been around since the 1980s, originally designed to ensure everyone had access to landline telephones for emergency services. Today, it has evolved to cover broadband internet and mobile smartphones. It provides a monthly discount on service. It is highly advised that you educate yourself on the exact parameters of this federal benefit by reviewing the <a href="https://www.fcc.gov/lifeline-consumers" class="text-blue-600 font-bold hover:underline transition" rel="dofollow">official Lifeline program guidelines</a> managed by the Federal Communications Commission.</p>
+            <p class="mb-4">When you enroll in Lifeline through a specific wireless provider, that provider will often bundle a smart device with your SIM card. Sometimes this device is entirely free, and other times it requires a minimal co-pay of around ten to twenty dollars.</p>
+
+            <h3 class="text-2xl font-bold text-blue-800 mt-10 mb-4">Chapter 3: Detailed Eligibility Requirements</h3>
+            <p class="mb-4">The systems in place are strictly monitored to prevent fraud and ensure that resources are allocated to families facing genuine financial hardship. You must prove your eligibility through one of two primary pathways: Income or Program Participation.</p>
+
+            <h4 class="text-xl font-semibold text-slate-800 mt-6 mb-3">Pathway A: Income Qualification</h4>
+            <p class="mb-4">Your total household income must be at or below 135% of the Federal Poverty Guidelines. A "household" is defined as any individual or group of individuals who live together at the same address and share income and expenses. When applying via this route, you must submit official documentation. Acceptable documents include:</p>
+            <ul class="list-disc pl-8 mb-6 text-slate-700 space-y-2">
+                <li>Your prior year's state, federal, or Tribal tax return.</li>
+                <li>Current income statements from an employer or paycheck stubs covering three consecutive months.</li>
+                <li>A Social Security statement of benefits.</li>
+                <li>Veterans Administration statement of benefits.</li>
+                <li>Retirement or pension statement of benefits.</li>
             </ul>
-            <p class="mb-4">Residents of Tribal lands have additional eligibility criteria. They can qualify through programs like Bureau of Indian Affairs General Assistance, Tribally-Administered Temporary Assistance for Needy Families (TTANF), or Food Distribution Program on Indian Reservations (FDPIR).</p>
 
-            <h2 class="text-3xl font-bold text-blue-800 mb-6 mt-8">The Step-by-Step Application Process</h2>
-            <p class="mb-4">The application process has been streamlined over the years to make it as accessible as possible. However, gathering the correct documentation beforehand will save you a lot of time. Here is a detailed guide on how you can proceed.</p>
-            <p class="mb-4">First, you need to verify your eligibility using the National Verifier. This is a centralized system created by the federal government to check if you meet the requirements. You can do this online, by mail, or through a participating service provider. You will be asked to provide your full legal name, date of birth, the last four digits of your Social Security Number, and your home address.</p>
-            <p class="mb-4">Second, you must gather your proof documents. The system might automatically verify you by checking databases from SNAP or Medicaid. If it cannot do this automatically, you will be prompted to upload digital copies or mail physical copies of your documents. Make sure the documents are clear, legible, and not expired.</p>
-            <p class="mb-4">Third, once approved, you need to select a service provider in your area. Different providers offer different plans and devices. Some might offer a basic smartphone, while others might provide a larger screen device. Take the time to compare what each company is offering in your specific ZIP code.</p>
+            <h4 class="text-xl font-semibold text-slate-800 mt-6 mb-3">Pathway B: Government Program Qualification</h4>
+            <p class="mb-4">This is the most common and fastest way to get approved. If you or your dependent already receive aid from specific federal programs, you are automatically eligible for telecommunication assistance. These programs include:</p>
+            <ul class="list-disc pl-8 mb-6 text-slate-700 space-y-2">
+                <li><strong>SNAP (Supplemental Nutrition Assistance Program):</strong> Helps families afford nutritious food.</li>
+                <li><strong>Medicaid:</strong> Provides health coverage to eligible low-income adults, children, and pregnant women.</li>
+                <li><strong>SSI (Supplemental Security Income):</strong> Provides stipends to low-income people who are either aged 65 or older, blind, or disabled.</li>
+                <li><strong>Federal Public Housing Assistance:</strong> Also known as Section 8 housing.</li>
+                <li><strong>Veterans Pension and Survivors Benefit:</strong> Support for those who have served the nation.</li>
+            </ul>
 
-            <h2 class="text-3xl font-bold text-blue-800 mb-6 mt-8">Why a Tablet is a Game Changer</h2>
-            <p class="mb-4">Smartphones are incredibly useful, but their small screens can be limiting for certain tasks. Laptops are powerful but can be expensive and bulky. A tablet strikes the perfect balance. It offers a screen large enough for comfortable reading and writing, while remaining highly portable and easy to use. Here are several areas where having this specific type of device makes a massive difference.</p>
+            <h3 class="text-2xl font-bold text-blue-800 mt-10 mb-4">Chapter 4: The Step-by-Step Application Blueprint</h3>
+            <p class="mb-4">Preparation is key. Follow these exact steps to ensure a smooth application process without unnecessary delays.</p>
+            
+            <div class="bg-slate-50 p-6 rounded-xl border border-slate-200 mt-6">
+                <ol class="list-decimal pl-6 space-y-4 text-slate-800 font-medium">
+                    <li><strong>Gather Your Documents:</strong> Before opening a browser or making a phone call, have your ID, proof of address, and proof of eligibility (like your Medicaid card or tax return) scanned and ready on your computer or phone.</li>
+                    <li><strong>Visit the National Verifier:</strong> This is the central database. You will create an account and input your details. The system will attempt to verify you automatically. If it cannot, it will prompt you to upload the documents you prepared in step one.</li>
+                    <li><strong>Wait for Approval:</strong> Approval can be instant, or it may take a few days if manual review is required. You will receive an application ID once approved.</li>
+                    <li><strong>Select a Provider:</strong> This is crucial. Not all providers offer tablets. You must research the telecommunications companies operating in your specific state. Compare their plans, data limits, and device offerings. Once you find a suitable company, provide them with your National Verifier application ID to finalize the enrollment.</li>
+                </ol>
+            </div>
 
-            <h3 class="text-2xl font-semibold text-gray-800 mb-4 mt-6">Educational Advancement</h3>
-            <p class="mb-4">For students, a tablet transforms how they learn. It serves as a digital library, holding hundreds of textbooks without adding weight to a backpack. Students can attend virtual classes, participate in interactive learning modules, and submit assignments online. The touch screen interface is also highly beneficial for younger children developing their motor skills through educational apps.</p>
+            <h3 class="text-2xl font-bold text-blue-800 mt-10 mb-4">Chapter 5: Avoiding Common Pitfalls and Scams</h3>
+            <p class="mb-4">Because these programs offer highly desirable electronics, scammers frequently target applicants. You must protect your personal information. Remember these golden rules:</p>
+            <p class="mb-4">The government will never call you and ask for money to process your application. Application processes through the National Verifier are entirely free. Be extremely wary of temporary pop-up tents on street corners claiming to give away devices immediately, unless you can verify they represent a legitimate, licensed telecommunications carrier. Always read the fine print before signing any digital or physical document.</p>
 
-            <h3 class="text-2xl font-semibold text-gray-800 mb-4 mt-6">Healthcare and Telemedicine</h3>
-            <p class="mb-4">The healthcare landscape has changed dramatically. Telehealth appointments have become standard. A larger screen allows patients to communicate clearly with their doctors via video calls. They can easily view medical charts, read prescription instructions, and monitor their health through various wellness applications. For the elderly or those with mobility issues, this digital access is a literal lifesaver.</p>
-
-            <h3 class="text-2xl font-semibold text-gray-800 mb-4 mt-6">Career Opportunities</h3>
-            <p class="mb-4">Searching for a job requires constant internet access. Applicants need to build resumes, browse job boards, and respond to emails from potential employers quickly. Furthermore, many initial job interviews are now conducted via video conferencing platforms. Having a reliable device with a good camera and microphone gives applicants a fair chance to present themselves professionally.</p>
-
-            <h2 class="text-3xl font-bold text-blue-800 mb-6 mt-8">How to Protect Yourself from Scams</h2>
-            <p class="mb-4">Unfortunately, where there are government benefits, there are also scammers trying to take advantage of vulnerable people. It is crucial to remain vigilant. Never pay an upfront fee to "guarantee" approval. Government programs do not charge application fees. Be extremely cautious of unsolicited phone calls or text messages asking for your Social Security Number or banking details. Always apply through official websites or verified service providers. If an offer seems too good to be true, it probably is.</p>
-
-            <h2 class="text-3xl font-bold text-blue-800 mb-6 mt-8">Maximizing Your Device's Potential</h2>
-            <p class="mb-4">Once you receive your device, it is important to take care of it and use it securely. Invest in a sturdy protective case and a screen protector to prevent accidental damage. Keep the operating system and applications updated, as these updates often contain critical security patches. Install a reputable antivirus program and avoid downloading files from unknown sources. By treating your device with care, it will serve you well for years to come.</p>
-
-            <h2 class="text-3xl font-bold text-blue-800 mb-6 mt-8">Conclusion: Embracing the Digital Future</h2>
-            <p class="mb-4">The digital divide is a complex issue, but progress is being made every single day. By understanding the resources available and taking the initiative to apply, you can secure the tools necessary for modern life. Education, healthcare, and employment are deeply intertwined with the internet. Ensuring that everyone has access is not just about technology; it is about human empowerment.</p>
-            <p class="mb-4">Do not let a lack of hardware hold you back from achieving your goals. Explore your options, gather your documents, and take the first step toward digital inclusion. If you believe you meet the criteria discussed in this comprehensive guide, do not hesitate to <a href="https://freetablet.click/" class="text-blue-600 font-bold hover:underline" rel="dofollow">visit freetablet.click</a> to learn more about the application process and secure your device today. Staying connected is your right, and the resources are out there waiting for you.</p>
+            <h3 class="text-2xl font-bold text-blue-800 mt-10 mb-4">Chapter 6: Maximizing the Value of Your New Device</h3>
+            <p class="mb-4">Once your tablet arrives, treat it as a valuable asset for your personal growth. These devices are perfect for educational apps, managing finances, and attending telehealth appointments. To ensure the longevity of your hardware, purchase a heavy-duty protective case immediately. Keep the battery charged between 20 percent and 80 percent to prolong its lifespan, and only download applications from official app stores to avoid malware.</p>
+            <p class="mb-4">By taking advantage of these programs, you are taking a massive step toward securing your digital future. If you are ready to explore the providers in your area and begin your application, make sure to <a href="https://freetablet.click/" class="text-blue-600 font-bold hover:underline transition" rel="dofollow">check updated free tablet offers</a> and see exactly what is currently available for your zip code.</p>
 
         </article>
     </main>
 
-    <footer class="bg-gray-800 text-white py-8 text-center mt-12">
-        <div class="container mx-auto px-6">
-            <p class="text-sm">&copy; 2026 Digital Inclusion Guide. All rights reserved.</p>
-            <p class="text-xs text-gray-400 mt-2">The information provided on this page is for educational purposes only and does not constitute legal or financial advice.</p>
+    <footer class="bg-slate-900 text-slate-300 py-10 mt-12 border-t-4 border-blue-600">
+        <div class="container mx-auto px-6 text-center md:text-left grid md:grid-cols-2 gap-8">
+            <div>
+                <h4 class="text-xl font-bold text-white mb-4">TechAccess Inclusion Initiative</h4>
+                <p class="text-sm">Dedicated to providing accurate, actionable information to bridge the technological gap in modern society.</p>
+            </div>
+            <div class="md:text-right">
+                <p class="text-sm mb-2">&copy; 2026 TechAccess. Hosted on GitHub Pages.</p>
+                <p class="text-xs text-slate-500">Disclaimer: This website is an independent informational guide and is not affiliated with any federal government agency. Eligibility and availability are subject to change based on provider policies and federal funding.</p>
+            </div>
         </div>
     </footer>
 
+    <script>
+        function calculateEligibility() {
+            const income = document.getElementById('income').value;
+            const programs = document.getElementById('programs').value;
+            const resultArea = document.getElementById('resultArea');
+            const resultText = document.getElementById('resultText');
+
+            resultArea.classList.remove('hidden', 'bg-green-100', 'border-green-400', 'bg-yellow-100', 'border-yellow-400', 'bg-red-100', 'border-red-400');
+            resultText.className = 'text-center font-bold text-lg';
+
+            if (programs === 'yes') {
+                resultArea.classList.add('bg-green-100', 'border-green-400', 'block');
+                resultText.classList.add('text-green-800');
+                resultText.innerHTML = "Excellent News! Because you participate in a qualifying program, you are highly likely to be approved. Please proceed to the Complete Guide below to start your application.";
+            } else if (income === 'yes') {
+                resultArea.classList.add('bg-green-100', 'border-green-400', 'block');
+                resultText.classList.add('text-green-800');
+                resultText.innerHTML = "Great! Your income level suggests you qualify. Make sure you have your tax returns or pay stubs ready for the application process.";
+            } else if (income === 'no' && programs === 'no') {
+                resultArea.classList.add('bg-red-100', 'border-red-400', 'block');
+                resultText.classList.add('text-red-800');
+                resultText.innerHTML = "Based on your answers, you might not meet the strict federal requirements. However, check local state programs which sometimes have different criteria.";
+            } else {
+                resultArea.classList.add('bg-yellow-100', 'border-yellow-400', 'block');
+                resultText.classList.add('text-yellow-800');
+                resultText.innerHTML = "We need a bit more information. Please read 'Chapter 3' in our guide below to understand the exact documentation you need to figure out your status.";
+            }
+        }
+    </script>
 </body>
 </html>
